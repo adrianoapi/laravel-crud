@@ -1,4 +1,5 @@
 @extends('master')
+@section('title', 'Crud - EDIT')
 @section('content')
 <div class="row">
     <div class="col-md-12">
