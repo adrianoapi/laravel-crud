@@ -7,6 +7,7 @@ use App\Blog;
 
 class BlogController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -14,8 +15,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs =  Blog::all();
-        return view('blog.index',['blogs' => $blogs]);
+        $blogs = Blog::all();
+        return view('blog.index', ['blogs' => $blogs]);
     }
 
     /**
@@ -25,7 +26,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('blog.create');
     }
 
     /**
@@ -36,7 +37,17 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validation
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+        ]);
+        // create new data
+        $blog = new blog;
+        $blog->title = $request->title;
+        $blog->description = $request->description;
+        $blog->save();
+        return redirect()->route('blog.index')->with('alert-success', 'Data Hasbeen Saved!');
     }
 
     /**
@@ -83,4 +94,5 @@ class BlogController extends Controller
     {
         //
     }
+
 }
