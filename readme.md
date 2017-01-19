@@ -22,6 +22,19 @@ Thank you for considering contributing to the Laravel framework! The contributio
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
 
+# Configuração
+## criando migrations
+> artisan make:migration create_post_table
+result: 2017_01_19_184203_create_post_table
+
+artisan migrate
+
+## criando controller
+> artisan make:controller BlogController --resource
+
+## criando módulo
+> artisan make:model Blog
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
