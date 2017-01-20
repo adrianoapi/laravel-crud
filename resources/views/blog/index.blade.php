@@ -15,10 +15,9 @@
             <th>Actions</th>
         </tr>
         <a href="{{route('blog.create')}}" class="btn btn-info pull-right">Create New Data</a><br><br>
-        <?php $no = 1; ?>
         @foreach($blogs as $blog)
         <tr>
-            <td>{{$no++}}</td>
+            <td>{{$blog->id}}</td>
             <td>{{$blog->title}}</td>
             <td>{{$blog->description}}</td>
             <td>
