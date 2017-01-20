@@ -26,14 +26,21 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## criando migrations
 > artisan make:migration create_post_table
 result: 2017_01_19_184203_create_post_table
-
-artisan migrate
+executa a ação, após a inserção da query no método
+> artisan migrate
 
 ## criando controller
 > artisan make:controller BlogController --resource
 
 ## criando módulo
 > artisan make:model Blog
+
+## getRoute
+> Route::currentRouteName();
+blog.index
+
+> Route::getCurrentRoute()->getActionName();
+App\Http\Controllers\BlogController@index
 
 ## License
 
