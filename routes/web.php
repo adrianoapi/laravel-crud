@@ -19,3 +19,7 @@ Route::group(['middleware' => ['web']], function() {
   Route::resource('blog','BlogController');  
   Route::resource('/','HomeController'); 
 });
+
+Route::group(array('middleware' => 'auth'), function() {
+//    Route::resource('blog','BlogController'); 
+});

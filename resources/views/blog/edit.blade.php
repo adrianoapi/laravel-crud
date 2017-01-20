@@ -15,7 +15,7 @@
             {!! $errors->first('title','<p class="help-block">:message</p>') !!}
         </div>
         <div class="form-group{{ ($errors->has('description')) ? $errors->first('title') : '' }}">
-            <input type="text" name="description" class="form-control" placeholder="Enter Description Here" value="{{$blog->description}}">
+            <textarea name="description" class="form-control" rows="5" id="description">{{$blog->description}}</textarea>
             {!! $errors->first('description','<p class="help-block">:message</p>') !!}
         </div>
         <div class="form-group">

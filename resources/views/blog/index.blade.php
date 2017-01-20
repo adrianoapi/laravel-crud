@@ -14,7 +14,7 @@
             <th class="col-md-6">Description</th>
             <th class="col-md-3">Actions</th>
         </tr>
-        <a href="{{route('blog.create')}}" class="btn btn-info pull-right">Create New Data</a><br><br>
+        <a href="{{route('blog.create')}}" class="btn btn-info pull-right">Nova notícia</a><br><br>
         @foreach($blogs as $blog)
         <tr>
             <td>{{$blog->id}}</td>
@@ -25,7 +25,7 @@
                     <input type="hidden" name="_method" value="delete">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <a href="{{route('blog.edit',$blog->id)}}" class="btn btn-primary">Edit</a>
-                    <input type="submit" class="btn btn-danger" onclick="return confirm('Are you sure to delete this data');" name="name" value="delete">
+                    <input type="submit" class="btn btn-danger" onclick="return confirm('Deseja excluir o item {{$blog->id}}');" name="name" value="delete">
                 </form>
             </td>
         </tr>
