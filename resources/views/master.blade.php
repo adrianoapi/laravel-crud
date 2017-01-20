@@ -1,3 +1,4 @@
+<?php $routeName = Route::currentRouteName(); ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -33,8 +34,8 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/blog">Admin</a></li>
+                        <li @if ($routeName == "index") class="active" @endif><a href="/">Home</a></li>
+                        <li @if ($routeName == "blog.index") class="active" @endif><a href="/blog">Admin</a></li>
                     </ul>
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">

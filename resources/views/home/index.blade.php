@@ -3,7 +3,12 @@
 @section('content')
 <div class="row">
     <div class="col-md-12">
-        <h1>Simples CRUD</h1>
+        <h1>Home</h1>
+        <?php
+        $url = Route::currentRouteName();
+        $action = Route::getCurrentRoute()->getActionName();
+        ?>
+        {{$url}}
     </div>
 </div>
 <div class="row">
