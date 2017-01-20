@@ -4,15 +4,10 @@
 <div class="row">
     <div class="col-md-12">
         <h1>Home</h1>
-        <?php
-        $url = Route::currentRouteName();
-        $action = Route::getCurrentRoute()->getActionName();
-        ?>
-        {{$url}}
     </div>
 </div>
 <div class="row">
-    <table class="table table-striped">
+    <table class="table table-striped table-responsive">
         <tr>
             <th class="col-md-1">ID</th>
             <th class="col-md-5">Title</th>

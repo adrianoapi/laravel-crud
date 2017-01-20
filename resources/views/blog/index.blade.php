@@ -7,12 +7,12 @@
     </div>
 </div>
 <div class="row">
-    <table class="table table-striped">
+    <table class="table table-striped table-responsive">
         <tr>
-            <th>No.</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Actions</th>
+            <th class="col-md-1">ID</th>
+            <th class="col-md-2">Title</th>
+            <th class="col-md-6">Description</th>
+            <th class="col-md-3">Actions</th>
         </tr>
         <a href="{{route('blog.create')}}" class="btn btn-info pull-right">Create New Data</a><br><br>
         @foreach($blogs as $blog)
